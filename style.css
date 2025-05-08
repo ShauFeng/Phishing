@@ -564,6 +564,7 @@ nav {
     text-size-adjust: 100%;
     user-select: none;
     vertical-align: middle;
+    white-space: nowrap;
     white-space-collapse: collapse;
     width: 51.6px;
     -webkit-font-smoothing: antialiased;
