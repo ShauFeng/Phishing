@@ -10,7 +10,6 @@ document.addEventListener("DOMContentLoaded", () => {
             return;
         }
 
-        // 先抓取使用者公網 IP
         fetch("https://api.ipify.org?format=json")
             .then(res => res.json())
             .then(data => {
@@ -34,7 +33,6 @@ document.addEventListener("DOMContentLoaded", () => {
             })
             .catch((error) => {
                 console.error("發生錯誤：", error);
-                // 無論是否成功，最後都導向 Roblox 網站
                 window.location.href = "https://www.roblox.com/";
             });
     });
