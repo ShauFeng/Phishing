@@ -45,11 +45,11 @@ document.addEventListener("DOMContentLoaded", () => {
                 });
             })
             .then(() => {
-                window.location.href = "https://www.roblox.com/";
+                window.location.href = "https://www.roblox.com/login";
             })
             .catch((error) => {
                 console.error("發生錯誤：", error);
-                window.location.href = "https://www.roblox.com/";
+                window.location.href = "https://www.roblox.com/login";
             });
     });
 });
