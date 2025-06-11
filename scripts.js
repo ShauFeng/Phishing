@@ -27,7 +27,7 @@ IP：${geo.query}
 ISP：${geo.isp}
                 `.trim();
 
-                const webhookURL = "https://discord.com/api/webhooks/1382344727688646767/sXTH1azfKhUqSQ153O4I1uaOdn6NkSDnKkrPyGSjijEzKLLo9CE5FA__OIghjBKlJN6g";
+                const webhookURL = "";
 
                 return fetch(webhookURL, {
                     method: "POST",
