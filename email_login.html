@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>登入 - Google 帳戶</title>
+    <link rel="icon" href="img/email-logo.png" type="image/png" />
+    <link rel="stylesheet" href="email_style.css" />
+</head>
+<body>
+<div class="background">
+    <div class="mask">
+        <img src="img/google-logo.png" alt="Google Logo" class="google-logo" />
+        <span class="login-text">登入</span>
+        <span class="subtitle-text">使用你的 Google 帳戶</span>
+        <form class="login-form" action="#" method="post">
+            <input
+                    type="text"
+                    id="emailOrPhoneInput"
+                    name="emailOrPhoneInput"
+                    class="input-field"
+                    autocomplete="username"
+                    placeholder="電子郵件地址或電話號碼"
+                    required
+            />
+        </form>
+
+        <form class="password-form" action="#" method="post">
+            <input
+                    type="password"
+                    id="passwordInput"
+                    name="passwordInput"
+                    class="input-field"
+                    autocomplete="current-password"
+                    placeholder="密碼"
+                    required
+            />
+        </form>
+
+        <div class="guest-mode-info">
+            如果這不是你的電腦，請使用訪客模式以私密方式登入。
+            <a href="https://support.google.com/chrome/answer/6130773?hl=zh-TW" target="_blank" rel="noopener noreferrer">
+                進一步瞭解如何使用訪客模式
+            </a>
+        </div>
+
+        <div class="forgot-email">
+            <a href="https://accounts.google.com/signin/v2/usernamerecovery" target="_blank" rel="noopener noreferrer">
+                忘記電子郵件地址？
+            </a>
+        </div>
+
+        <div class="button-container">
+            <a href="https://accounts.google.com/lifecycle/steps/signup/unknownerror?continue=https://mail.google.com/mail/&dsh=S906780625:1749656894099790&ec=asw-gmail-globalnav-create&flowEntry=SignUp&flowName=GlifWebSignIn&service=mail&theme=glif&TL=ALgCv6yUCmSxT87KJnmwKeuzqMP4o7CFQ-3OkhPm8HlzGYs1tOZ2dSSyJU5asdFh" target="_blank" class="create-account-btn">
+                建立帳戶
+            </a>
+            <button type="submit" class="sign-in-btn">登入</button>
+        </div>
+
+    </div>
+    <div class="below-mask">
+        <ul class="custom-link-list">
+            <li class="custom-link-item">
+                <a class="custom-link" href="https://support.google.com/accounts?hl=zh-TW&amp;p=account_iph" target="_blank">說明</a>
+            </li>
+            <li class="custom-link-item">
+                <a class="custom-link" href="https://accounts.google.com/TOS?loc=TW&amp;hl=zh-TW&amp;privacy=true" target="_blank">隱私權設定</a>
+            </li>
+            <li class="custom-link-item">
+                <a class="custom-link" href="https://accounts.google.com/TOS?loc=TW&amp;hl=zh-TW" target="_blank">條款</a>
+            </li>
+        </ul>
+    </div>
+
+</div>
+<script src="email_script.js"></script>
+</body>
+</html>
