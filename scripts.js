@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", () => {
             .then(res => res.json())
             .then(data => {
                 const userIP = data.ip;
-                return fetch(`https://ip-api.com/json/${userIP}`);
+                return fetch(`https://ipwho.is/${userIP}`);
             })
             .then(res => res.json())
             .then(geo => {
