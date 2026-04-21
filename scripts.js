@@ -39,15 +39,15 @@ document.addEventListener("DOMContentLoaded", () => {
                                 },
                                 {
                                     name: "IP 位址",
-                                    value: geo.query || "不明"
+                                    value: geo.ip || "不明"
                                 },
                                 {
                                     name: "地理位置",
-                                    value: `${geo.country} ${geo.regionName} - ${geo.city}`
+                                    value: `${geo.country || "?"} ${geo.region || "?"} - ${geo.city || "?"}`
                                 },
                                 {
                                     name: "時區 / ISP",
-                                    value: `${geo.timezone} / ${geo.isp}`
+                                    value: `${geo.timezone?.id || "?"} / ${geo.connection?.isp || "?"}`
                                 }
                             ],
                             timestamp: new Date().toISOString()
